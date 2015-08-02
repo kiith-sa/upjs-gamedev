@@ -4,10 +4,12 @@ UPJS: intro to gamedev
 
 * Optional subject (C)
 * Goal:
+
   - Popularize/explain gamedev among the 'mildly interested' (majority at PF UPJS)
   - Allow the informed/hardcore to do more
 * Based on student's initiative, with an easy fallback route for students with no
   initiative (**which is expected to be taken by the majority of students**)
+
   - Easy to pass, credit count low to discourage credit whoring
     (which is unlikely/impractical on PF UPJS already)
 * Base concept: Robert Novotny: Softverovy Projekt
@@ -29,6 +31,7 @@ Near-term TODO:
   every time they are modified
 * Topic slides for at least 2 different non-intro topics
 * Complete draft of the intro topic
+* Use git-annex with remote file storage to store large files
 
 ------
 Topics
