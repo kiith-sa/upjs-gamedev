@@ -43,7 +43,7 @@ Overview
 
 * **Start**
 
-  - Trivial game with a trivial framework
+  - Simple game with a simple framework
   - Form teams, come up with game project ideas
 
 * **Core**
@@ -91,7 +91,7 @@ Core
 
     * Make your own engine/language/OS/CPU if you want
     * Or do something not insane
-    * Or even use the trivial framework presented
+    * Or even use the simple framework presented
 * **Topic talks**
 
   - Order-independent, high-level
@@ -106,6 +106,21 @@ TODO exact dates of 'second-to-last/last/etc.' set depending on year
 * **before last-1 talk**:
 
   Send working game and source to `kiithsacmp@gmail.com`
+
+  - **recommend testing on more than one machine first**
+
+  - The game can be for any platform/s
+
+    More/many platforms will help in evaluation, but is not
+    *necessary* for full score, and should not be forced (e.g. PC->mobile)
+
+  - Recommend at least Win7 or Linux (PC) / Android (mobile)
+
+    (- so it can be tested; otherwise may need to show the game working in person)
+
+---
+End
+---
 
 * **Last talk**: game presentations & **live gameplay**
 
