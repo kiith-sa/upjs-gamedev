@@ -12,7 +12,11 @@ Substantial
 * Interfaces: output (2D screen, web, VR, AR)
 * Gaming hardware, differences and tradeoffs
 * Getting resources (sound, graphics, etc.) (finding, hiring, etc.)
-* Technical parts of art/graphics (polycounts, texture sizes, shader constraints, 3D vs 2D, 2D trying to look like 3D, procedural, voxels, etc.)
+* Shaders/GPU programming.
+* OpenGL/Vulkan/graphics programming (sending/retrieving data to/from GPU,
+  concepts like vertex buffers, frame buffers, render passes, transparency,
+  vertex/pixel formats (including e.g. sizeof vertices), indexing in VBOs,
+  GPU command queues, etc.)
 * Level design (with a dead-simple 'editor webapp' for some simple game (like Arkanoid from IHRA?))
 * Financing (publishers, ads, early access, crowdfunding, steam/gog/desura, f2p), budgeting, creatively lowering costs (art direction, etc.)
   For KS links: http://www.gamedev.net/page/resources/_/business/breaking-into-the-industry/when-your-best-isnt-good-enough-a-tale-of-failure-part-i-r4108
@@ -23,10 +27,10 @@ Substantial
 * Modding (from the game developer's POV)
 * Creative control (publishers, middleware licenses, steam/gog/desura)
 * Distribution platforms (steam/gog/desura(dead? - replace by itch.io/indiegamestand), appstore/googleplay)
-* 3D graphics creation (make a simple model in Blender,
-  high-level explanation of textures, rigs, animations)
+* 3D animation (keyframes, rigs, IK, procedural, etc.)
 * Multiplayer (from gameplay POV), + some light notes on networking
 * Physics (what is feasible, basic idea on how it works)
+* making 2D graphics - doesn't fit into the 3D graphics topic
 
 
 -----------
@@ -34,7 +38,7 @@ Inspiration
 -----------
 
 * Player choice versus story
-* Art side of the game (about consistent art direction, etc -
+* Art style of the game (about consistent art direction, etc -
   see e.g. Poco Eco from GameDays, old Shiny games, etc.)
 * Demoscene (wow factor & inspiration about procedural generation - nothing more)
 * History of computer games (from developer's standpoint) 
