@@ -2,9 +2,9 @@
 .. Distributed under the Creative Commons Attribution 3.0 Unported License.
 ..    (see the license at http://creativecommons.org/licenses/by/3.0/)
 
-=========================
-Making graphics for games
-=========================
+==============================
+Making (3D) graphics for games
+==============================
 
 .. TODO link to slides on site
 
@@ -13,27 +13,20 @@ Making graphics for games
 All kinds of graphics assets/approaches
 ---------------------------------------
 
-* 3D: Triangle meshes, voxels
-* 2D: Sprites, vectors
+* Triangle meshes 
+* Voxels
 
 
 * Textured?
 * Shaders?
 * Animated?
 * Procedural?
-* (2D) pre-rendered?
 * ...
 
 
-==
-3D
-==
-
-.. image:: 3dmodeling.jpg
-   :align: center
-   :width: 100%
-
-.. by Richard Fox http://rfoxart.com/
+======================
+Triangle mesh graphics
+======================
 
 --------------------
 Blender - setting up
@@ -43,7 +36,7 @@ Blender - setting up
 
   https://blender.org/download
 
-  On Linux also: ``sudo apt-get install blender`` or equivalent (may be older version)
+  On Linux also: ``sudo apt-get install blender`` or equivalent
 
 
 * **This is not a complete Blender tutorial**
@@ -95,11 +88,11 @@ Cube
 Basic Blender controls
 ----------------------
 
-* If you played around with Blender's spaceship UI till now, restart it.
+* If you played around with Blender till now, restart it.
 
-* ``<Tab>``: switch between object/edit **modes**
+* ``<Tab>``: switch between *object*/*edit* **modes**
 
-  Switch to edit mode first; will edit the selected object (cube)
+  Switch to edit mode; will edit the selected object (cube)
 
 * ``drag-<MMB>``: rotate the view, ``<Wheel>``: zoom
 
@@ -107,11 +100,11 @@ Basic Blender controls
 
 * ``A``: select/deselect **all**  
 
-* ``B``, then ``drag <LMB>``: select in a rectangle;
+* ``B``, then ``drag <LMB>``: select in rectangle; **adds** to selection
 
-  **adds** to selection instead of replacing
+.. container:: centered-bottom
 
-* See GIF on next slide
+   Next slide with GIF
 
 
 ----------------------
@@ -135,9 +128,11 @@ Basic Blender controls
 
   Analogous for ``G``/``R``/``S`` in all directions
 
-* GIF on next slide
-
 Go play around grabbining, rotating and scaling stuff now - in **edit** mode.
+
+.. container:: centered-bottom
+
+   GIF on next slide
 
 ----------------------
 Basic Blender controls
@@ -167,7 +162,7 @@ FPS; few players? lots of tris/model
 
 RTS; 1000 units/screen? fewer tris/model
 
-**Many other factors** (shaders, textures, etc.)
+**Many other factors** (shaders, textures...)
 
 ----------------------------------
 Keep the triangle/vertex count low
@@ -180,8 +175,7 @@ Keep the triangle/vertex count low
 - Don't model what you don't see in game
 - Rarely seen/distant/uninteresting parts need less detail
 
-  - Bottom of a vehicle
-  - Unreachable areas
+  - Unreachable areas (e.g bottom of a vehicle)
   - Body vs face on a character
 
   This also applies to texturing
@@ -224,7 +218,9 @@ Subdivision modeling
 * Press ``E`` and drag your mouse around to extrude
 * Yay 
 
-* GIF next slide
+.. container:: centered-bottom
+
+   GIF next slide
 
 --------------------
 Subdivision modeling
@@ -244,8 +240,10 @@ More subdivision modeling
 
 * Grab (``G``) + scale (``S``) to get more freedom
 
-* Press ``<Left>`` to GIF
 
+.. container:: centered-bottom
+
+   GIF yada yada
 
 -------------------------
 More subdivision modeling
@@ -269,13 +267,13 @@ Art style vs model detail
 -------------------------
 
 * Realism is nice *if you can afford it*
-* Detailed art is expensive 
-* Low-detail realism looks like shit
+* Detailed art is *expensive*
+* *Low*-detail realism **looks like shit**
 
 * Good-looking art is not always expensive
 
   Cheap art is not always bad
-* Keep the art consistent 
+* **Keep the art consistent**
 
 * This is worth a topic by itself
 
@@ -317,7 +315,7 @@ UV mapping
 .. .. TODO? UV map + render example of the above
 ..              (from my own models)
 
-* Areas can overlap on the UV map to reuse the texture
+* Areas can *overlap* on the UV map to reuse the texture
 
 .. .. TODO? UV map + render example of the above
 ..              (from my own models)
@@ -338,7 +336,9 @@ UV mapping in Blender
 * ``A`` to select the entire model and ``U`` => ``Unwrap``
 * Not you an select and ``G``/``R``/``S`` stuff in the UV window
 
-* GIF yada yada
+.. container:: centered-bottom
+
+   yada GIF yada
 
 ---------------------
 UV mapping in Blender
@@ -352,7 +352,7 @@ UV mapping in Blender
 Textures
 --------
 
-* Are 2D raster images
+* Are (usually) 2D raster images
 * Use **lossless** power-of-two textures (not just in Blender)
 
   - 512x512, 4096x128, etc.
@@ -369,21 +369,21 @@ Basic texture in blender
 ------------------------
 
 * In UV editor, click ``Image`` -> ``New Image`` and for generated type select ``Color grid``
-* In 3D view, enable ``Textured`` viewport shading 
-* You'll see the texture on the model 
+* In 3D view, enable ``Textured`` viewport shading to see a textured model
+* **Note**; the texture *is not* actually applied to the model yet 
 
-  - Note; the texture *is not* actually applied to the model yet 
-
-    That involves *materials* (google if interested)
+  That involves *materials* (google if interested)
 
 * You can paint the texture from 3D view in ``Texture paint`` mode 
 
   - Or as a 2D image with an external tool
   - Or both! google ``Blender Project Paint``:
 
-    * Take screen, draw on it in 2D program, apply changes in Blender
+    * Take screenshot, draw on it in 2D program, apply changes in Blender
 
-* Yada yada yada GIF
+.. container:: centered-bottom
+
+   yada yada yada GIF
 
 ------------------------
 Basic texture in blender
@@ -416,13 +416,11 @@ Normal maps
    :align: right
 
 * Normals determine how light is reflected
-* On a 3D model, normals are *per-vertex*
+* On a 3D model, normals are **per-vertex**
+* Normals are 3-component vectors... 
 
-  (This is not the math world)
+  - **RGB** is a 3-component vector too
 
-* Normals are 3-component vectors 
-
-  - Can be encoded in an RGB texture
 * A normal texture/map can add 'fake details'
 
   .. image:: normal1.png
@@ -455,9 +453,9 @@ Baking
   - Diffuse/specular from procedural materials
   - Ambient occlusion
   - Height 
-  - Etc.
+  - ...
 
-* Find out more: use Google
+* Find out more: **use Google**
 
 
 ------------------------
@@ -468,7 +466,7 @@ Textures and performance
 * Textures uncompressed or fixed-ratio compressed in VRAM
 * 4B diffuse + 4B normal/height + 3B specular + 1B glow == **12B / pixel**
 
-  - and there may be more data, **32-bit** float components, etc.
+  - also there may be more data, **32-bit** float components, etc.
 * 2048x2048 - 4M pixels, x12 per pixel: 48MiB VRAM for a **single texture**
 
   - \* 4/3 with mipmaps
@@ -533,9 +531,9 @@ Animation
   *static meshes* are way easier to render in-game
 
 
-==================
-Non-traditional 3D
-==================
+=================
+Unconventional 3D
+=================
 
 --------------
 Procedural art
@@ -601,6 +599,26 @@ Voxels
 More resources
 --------------
 
+- **Tools:**
+
+  * http://wings3d.com
+  * http://neotextureedit.sourceforge.net/
+  * http://www.bottlenose.demon.co.uk/share/evolvotron/
+  * http://www.makehuman.org/
+
+- **Blender**
+
+  * http://blenderartists.org/forum/
+  * http://www.blendernation.com/
+  * http://www.blenderguru.com
+  * https://www.blender.org/support/tutorials/
+  * https://cgcookie.com/learn-blender/
+
+
+--------------
+More resources
+--------------
+
 - **Communities:**
 
   * http://cgsociety.org
@@ -616,144 +634,6 @@ More resources
   * http://opengameart.org
   * http://blendswap.com
   * http://freegamedev.net/wiki/Art_asset_resources
-
---------------
-More resources
---------------
-
-- **Tools:**
-
-  * http://wings3d.com
-  * http://neotextureedit.sourceforge.net/
-  * http://www.bottlenose.demon.co.uk/share/evolvotron/
-  * http://www.makehuman.org/
-
-- **Blender tutorials/resources**
-
-  * http://blenderartists.org/forum/
-  * http://www.blendernation.com/
-  * http://www.blenderguru.com
-  * https://www.blender.org/support/tutorials/
-  * https://cgcookie.com/learn-blender/
-
-
-==
-2D
-==
-
--------
-Sprites
--------
-
-.. image:: sprite-big.gif
-   :align: right
-
-
-* Fixed-size (really bad idea to scale sprites)
-
-* Tools: Pixel art editors: Google ``pixel art editor``
-
-  - **Krita**; esp. for high-res art
-  - **Photoshop**
-  - **the GIMP**
-
-* Also google: *So You Want To Be A Pixel Artist?*
-
-.. image:: sprite-view.png
-   :width: 39%
-   :align: center
-
----------------------
-Sprites and animation
----------------------
-
-**Monolithic sprites**
-
-* Run, fire, reload; run + fire; run + reload
-
-  Every 'combination of actions' needs separate frames; may be a lot
-* This may or may not be an issue, depending on game
-* Often frames merged into a **spritesheet**:
-
-.. image:: spritesheet.png
-   :width: 45%
-   :align: center
-
-
----------------------
-Sprites and animation
----------------------
-
-**Sprites divided into sub-sprites (e.g. head, hands, etc.)**
-
-* Only animate sub-sprites (or even just move/rotate them around)
-* May be a necessity e.g. in physics based games
-* Parts can be combined in different ways
-
-  - E.g. user-created characters
-
-.. image:: subsprites.jpg
-   :width: 63%
-   :align: center
-
-
-
--------------
-Pre-rendering
--------------
-
-* Sprites from 3D models... analogous to baking in 3D graphics
-* Create a model, let a script render all frames of a sprite 
-
-  - Make it as detailed as possible 
-  - Can use all features of 3D software; e.g. procedural textures
-  - Usually *way* more complex/hacky than it sounds
-
-* Can pre-render normal, specular, etc. for a '3D in 2D' look
-
-.. image:: prerendering.jpg
-   :width: 50%
-   :align: center
-
-
--------
-Vectors
--------
-
-* Flash: It's dead, Jim (*about time*)
-* SVG: improvement but is a clusterfuck of its own
-
-  - good for web, but complicated; often overkill
-
-* Procedural, or even hardcoded, with shaders:
-
-  - Can do amazing real-time effects that SVG just can't
-
-
-.. image:: vector.jpg
-   :width: 45%
-   :align: center
-
-.. from http://galleryhip.com/vector-graphics-games.html
-
--------
-Vectors
--------
-
-
-* Similar to *vector* 3D models, but in 2D, with more than just triangles
-* Art scales with screen size
-
-  - May be hard/expensive to get a 'detailed' look 
-
-* Formats support complex features 
-
-  - Engines (usually) do not, use subsets
-
-
-* Tools: Inkscape(SVG), Adobe Illustrator, CorelDRAW, *raw code*
-
-
 
 -------
 The end
