@@ -154,6 +154,7 @@ Mandatory:
 
 * Work over time ("stand-up" meetings, questions, etc.) (**0-15pt**)
 * A new topic with slides/resources [#]_: (**20pt** per topic)
+* A minor fix in slides/resources: (**1pt** per fix)
 * Enter IHRA [#]_ (**10pt**), send and present your game there (**10pt**)
 
 .. [#] http://github.com/kiith-sa/upjs-gamedev
